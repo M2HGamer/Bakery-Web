@@ -9,6 +9,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Herr+Von+Muellerhoff&family=Poiret+One&family=Source+Sans+Pro:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Dark mode styles */
+        body.dark-mode {
+            background-color: #000;
+            color: #fff;
+        }
+        body.dark-mode .nav-link {
+            color: #fff;
+        }
+        body.dark-mode .hero .btn {
+            background-color: var(--secondary-font-color);
+            color: white;
+        }
+        body.dark-mode .headline-dark{
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
@@ -26,13 +43,13 @@
                         <a href="index.html" class="nav-link active">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="about.html" class="nav-link">About Us</a>
+                        <a href="about.html" class="nav-link underline-hover-animation">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a href="about.html#reservation" class="nav-link">Reservation</a>
+                        <a href="about.html#reservation" class="nav-link underline-hover-animation">Reservation</a>
                     </li>
                     <li class="nav-item">
-                        <a href="bakers.html" class="nav-link">Bakers</a>
+                        <a href="bakers.html" class="nav-link underline-hover-animation">Bakers</a>
                     </li>
                 </ul>
             </nav>
