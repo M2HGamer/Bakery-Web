@@ -195,8 +195,32 @@ header {
 .nav-link:hover {
     color: var(--secondary-font-color);
 }
+/* Add this CSS to your existing style.css file or embed it within your HTML file */
+.nav-link.underline-hover-animation {
+    position: relative;
+    color: var( --white-color); /* Change this to your desired text color */
+    text-decoration: none; /* Remove default underline */
+}
+
+.nav-link.underline-hover-animation::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px; /* Adjust this value to control the distance between text and underline */
+    width: 100%;
+    height: 2px; /* Underline thickness */
+    background-color: var(--secondary-font-color); /* Underline color */
+    transform: scaleX(0); /* Initial scale to hide the underline */
+    transition: transform 0.3s ease; /* Smooth animation effect */
+    transform-origin: bottom left; /* Scale from left to right */
+}
+
+.nav-link.underline-hover-animation:hover::after {
+    transform: scaleX(1); /* Fully scale the underline on hover */
+}
+
 h5,h4:hover {
-    color: var(--secondary-font-color);
+    color: black;
 }
 
 /* HERO SECTION*/
@@ -262,7 +286,7 @@ h1.headline {
 }
 
 .btn:hover{
-    border-radius: 20px;
+    border-radius: 5px;
     transition: 0.6s;
 }
 
@@ -584,6 +608,10 @@ footer .asterisk {
     text-transform: uppercase;
     margin-top: 2rem;
     letter-spacing: .3rem;
+}
+
+.baker h5:hover{
+    color: var(--secondary-font-color);
 }
 
 .baker .social-icons {
